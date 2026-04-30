@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request a Quote — Snazzyboy Signature</title>
+  <meta name="description" content="Request a custom quote for PPE, safety wear, uniforms or branded apparel. We'll respond within one business day." />
+  <link rel="canonical" href="https://snazzyboysignature.co.za/quote.html" />
+  <link rel="icon" href="favicon.ico" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Request a Quote — Snazzyboy Signature" />
+  <meta property="og:description" content="Request a custom quote for PPE, safety wear, uniforms or branded apparel. We'll respond within one business day." />
+  <meta property="og:image" content="assets/img/hero.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://csaifavswftfemdcuiev.supabase.co" crossorigin />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="page-app">
+    <div data-slot="header"></div>
+
+    <main class="page-main">
+      <div class="container form-narrow">
+        <a class="page-back" href="index.html">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+          <span>Back home</span>
+        </a>
+
+        <div data-quote-stage="form">
+          <div class="page-intro">
+            <span class="eyebrow">Custom Order</span>
+            <h1 class="h-display">Request a <span class="italic text-gradient-gold">Quote</span></h1>
+            <p>Tell us about your project. We'll come back with pricing, timing and a sample plan within one business day.</p>
+          </div>
+
+          <form id="quote-form" novalidate>
+            <section class="form-section">
+              <h2>Your details</h2>
+              <div class="field-grid">
+                <div class="field">
+                  <label for="q-name">Name *</label>
+                  <input class="input" id="q-name" name="name" type="text" maxlength="100" required />
+                </div>
+                <div class="field">
+                  <label for="q-email">Email *</label>
+                  <input class="input" id="q-email" name="email" type="email" maxlength="255" required />
+                </div>
+                <div class="field">
+                  <label for="q-phone">Phone</label>
+                  <input class="input" id="q-phone" name="phone" type="tel" maxlength="30" />
+                </div>
+                <div class="field">
+                  <label for="q-company">Company</label>
+                  <input class="input" id="q-company" name="company" type="text" maxlength="100" />
+                </div>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <h2>Garment details</h2>
+              <div class="field-grid">
+                <div class="field">
+                  <label for="q-category">Category *</label>
+                  <select class="select" id="q-category" name="category" required>
+                    <option value="">Select category</option>
+                    <option value="ppe">PPE</option>
+                    <option value="safety">Safety Wear</option>
+                    <option value="uniforms">Uniforms (Corporate / School)</option>
+                    <option value="custom">Custom Apparel</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="q-garment-type">Garment type</label>
+                  <input class="input" id="q-garment-type" name="garment_type" type="text" placeholder="e.g. Hi-vis vest, polo shirt" maxlength="200" />
+                </div>
+                <div class="field">
+                  <label for="q-quantity">Quantity</label>
+                  <input class="input" id="q-quantity" name="quantity" type="text" placeholder="e.g. 50 units" maxlength="50" />
+                </div>
+                <div class="field">
+                  <label for="q-sizes">Sizes</label>
+                  <input class="input" id="q-sizes" name="sizes" type="text" placeholder="e.g. 10×M, 20×L, 20×XL" maxlength="200" />
+                </div>
+                <div class="field">
+                  <label for="q-deadline">Deadline</label>
+                  <input class="input" id="q-deadline" name="deadline" type="text" placeholder="e.g. End of June" maxlength="100" />
+                </div>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <h2>Branding</h2>
+              <div class="field-grid">
+                <div class="field">
+                  <label for="q-method">Method</label>
+                  <select class="select" id="q-method" name="branding_method">
+                    <option value="">Print / Embroidery / Both</option>
+                    <option value="print">Print</option>
+                    <option value="embroidery">Embroidery</option>
+                    <option value="both">Both</option>
+                    <option value="none">None</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="q-placement">Placement</label>
+                  <input class="input" id="q-placement" name="branding_placement" type="text" placeholder="e.g. Left chest + back" maxlength="200" />
+                </div>
+                <div class="field">
+                  <label for="q-colors">Colours</label>
+                  <input class="input" id="q-colors" name="branding_colors" type="text" placeholder="e.g. Gold + Black" maxlength="200" />
+                </div>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <h2>Project brief</h2>
+              <div class="field field--full">
+                <label for="q-message">Tell us more *</label>
+                <textarea class="textarea" id="q-message" name="message" rows="5" minlength="10" maxlength="2000" required placeholder="Anything we should know — fit, fabric preferences, brand guidelines, delivery address..."></textarea>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <h2>Reference images &amp; artwork</h2>
+              <label class="upload">
+                <input id="q-files" type="file" multiple accept="image/*,.pdf,.ai,.eps,.svg" />
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg>
+                <p>Click to upload logos, artwork or inspiration</p>
+                <p class="upload__hint">Up to 8 files · 10MB each</p>
+              </label>
+              <ul class="file-list" data-file-list></ul>
+            </section>
+
+            <div class="form-submit-row">
+              <button type="submit" class="btn btn--gold btn--lg" data-submit-btn>Submit Quote Request</button>
+              <p class="hint">
+                Or reach us directly at <a href="mailto:info@snazzyboysignature.co.za">info@snazzyboysignature.co.za</a>
+                / <a href="https://wa.me/27627951658" target="_blank" rel="noopener noreferrer">WhatsApp</a>.
+              </p>
+            </div>
+          </form>
+        </div>
+
+        <div data-quote-stage="success" hidden>
+          <div class="success-block">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="icon-check" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <h1 class="h-display">Thank you, <span data-success-name>friend</span>.</h1>
+              <p>Your quote request is in. We'll get back to you within 1 business day at <strong data-success-email>your email</strong>.</p>
+              <div class="success-actions">
+                <a class="btn btn--gold" href="index.html">Back home</a>
+                <a class="btn btn--outline" href="https://wa.me/27627951658" target="_blank" rel="noopener noreferrer">WhatsApp us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div data-slot="drawer"></div>
+    <div data-slot="footer"></div>
+  </div>
+
+  <script type="module" src="assets/js/cart.js"></script>
+  <script type="module" src="assets/js/ui.js"></script>
+  <script type="module" src="assets/js/quote.js"></script>
+</body>
+</html>
