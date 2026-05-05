@@ -18,11 +18,17 @@ const NAV_LINKS = [
   { href: "index.html#custom",   label: "Custom Apparel" },
   { href: "index.html#about",    label: "About" },
   { href: "index.html#contact",  label: "Contact" },
+  { href: "shop.html",           label: "Shop", separator: true },
 ];
 
 function buildHeader() {
   const desktopLinks = NAV_LINKS
-    .map((l) => `<a href="${l.href}">${l.label}</a>`)
+    .map((l) => {
+      const sep = l.separator
+        ? `<span class="nav-links__sep" aria-hidden="true">|</span>`
+        : "";
+      return `${sep}<a href="${l.href}">${l.label}</a>`;
+    })
     .join("");
   const mobileLinks = NAV_LINKS
     .map((l) => `<a href="${l.href}">${l.label}</a>`)
@@ -105,8 +111,6 @@ function buildFooter() {
         <p class="footer-copy">© <span data-year></span> Snazzyboy Signature. All rights reserved.</p>
         <div class="footer-meta-links">
           <a href="quote.html">Request a Quote</a>
-          <span>·</span>
-          <a href="shop.html">Shop</a>
         </div>
       </div>
     </footer>

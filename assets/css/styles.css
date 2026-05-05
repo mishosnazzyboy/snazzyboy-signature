@@ -1,9 +1,3 @@
-/* ==========================================================================
-   Snazzyboy Signature — Static stylesheet
-   Replicates the gold & black design system from the original React/Tailwind
-   build, so a single hand-written stylesheet can power every page.
-   ========================================================================== */
-
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* ---------- Design tokens ---------- */
@@ -277,6 +271,12 @@ p { margin: 0; }
   transition: var(--transition-smooth);
 }
 .nav-links a:hover { color: hsl(var(--primary)); }
+.nav-links__sep {
+  font-size: 0.75rem;
+  color: hsl(var(--foreground) / 0.25);
+  user-select: none;
+  pointer-events: none;
+}
 
 .nav-actions {
   display: flex;
