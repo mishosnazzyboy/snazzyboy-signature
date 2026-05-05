@@ -188,8 +188,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const fileInput = document.getElementById("q-files");
   fileInput?.addEventListener("change", (e) => {
     const selected = Array.from(e.target.files || []);
-    const valid = selected.filter((f) => f.size <= MAX_FILE_SIZE);
-    if (valid.length < selected.length) {
+    const isPdf = (f) =>
+      f.type === "application/pdf" || /\.pdf$/i.test(f.name);
+    const pdfs = selected.filter(isPdf);
+    if (pdfs.length < selected.length) {
+      showToast("Only PDF files are allowed", { variant: "error" });
+    }
+    const valid = pdfs.filter((f) => f.size <= MAX_FILE_SIZE);
+    if (valid.length < pdfs.length) {
       showToast("Some files exceed 10MB and were skipped", { variant: "error" });
     }
     state.files = state.files.concat(valid).slice(0, MAX_FILES);
