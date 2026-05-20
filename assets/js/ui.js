@@ -112,6 +112,7 @@ function buildFooter() {
         <div class="footer-meta-links">
           <a href="quote.html">Request a Quote</a>
         </div>
+        <p class="footer-credit">Built by <a href="https://pnjansen.github.io" target="_blank" rel="noopener noreferrer">PN Jansen</a></p>
       </div>
     </footer>
   `;

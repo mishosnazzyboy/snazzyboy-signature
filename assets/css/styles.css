@@ -594,6 +594,17 @@ p { margin: 0; }
   color: hsl(var(--muted-foreground) / 0.6);
 }
 .footer-meta-links a:hover { color: hsl(var(--primary)); }
+.footer-credit {
+  text-align: center;
+  margin-top: 0.75rem;
+  font-size: 0.625rem;
+  color: hsl(var(--muted-foreground) / 0.5);
+}
+.footer-credit a {
+  color: hsl(var(--muted-foreground) / 0.7);
+  transition: var(--transition-smooth);
+}
+.footer-credit a:hover { color: hsl(var(--primary)); }
 
 /* ---------- Cart drawer ---------- */
 .drawer-backdrop {
